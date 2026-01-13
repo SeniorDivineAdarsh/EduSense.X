@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Name Barcode Generator</title>
+
+  <!-- JsBarcode Library -->
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Naam ka Barcode Generator</h2>
+
+  <input type="text" id="nameInput" placeholder="Apna naam likho">
+  <button onclick="generateBarcode()">Generate</button>
+
+  <br><br>
+  <svg id="barcode"></svg>
+
+  <script>
+    function generateBarcode() {
+      var name = document.getElementById("nameInput").value;
+
+      if (name === "") {
+        alert("Please apna naam likho!");
+        return;
+      }
+
+      JsBarcode("#barcode", name, {
+        format: "CODE128",
+        lineColor: "#000",
+        width: 2,
+        height: 100,
+        displayValue: true
+      });
+    }
+  </script>
+
+</body>
+</html>
