@@ -18,7 +18,7 @@ To build future-ready classrooms with smart technology, real-time insights, and 
 - Backend Services
 
 ## 🛠 Tech Stack
-- Flutter
+- HTML
 - Firebase
 - AI & Analytics
 - Web & Mobile Support
@@ -28,6 +28,3 @@ Work in progress 🚀
 
 ## 🤝 Contributing
 This project is currently under active development.
-
-## 📜 License
-MIT License
